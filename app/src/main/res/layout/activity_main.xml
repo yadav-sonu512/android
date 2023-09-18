@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2962FF">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_arrow_back_24"/>
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Test ArrayList"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="22dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_more_vert_24"/>
+    </Toolbar>
+
+    <EditText
+        android:id="@+id/list"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Enter your name"/>
+    <EditText
+        android:id="@+id/list2"
+        android:layout_below="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Enter your Email"/>
+    <EditText
+        android:id="@+id/list3"
+        android:layout_below="@+id/list2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Enter your phone"/>
+    <EditText
+        android:id="@+id/list4"
+        android:layout_below="@+id/list3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Enter your password"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:text="Next"
+        android:layout_below="@+id/list4"
+       android:layout_marginLeft="60dp"
+        android:textSize="25sp"/>
+
+</RelativeLayout>
