@@ -27,13 +27,26 @@ class SecondActivity : AppCompatActivity() {
        showCustomDialog()
 //
             }
-//            val back = findViewById<ImageView>(R.id.back)
-//            back.setOnClickListener {
-//                onBackPressed()
-//            }
+            val shimpleDialog = findViewById<Button>(R.id.ShimpleDialog)
+            shimpleDialog.setOnClickListener {
+                showDialog()
+            }
 
 
         }
+      fun showDialog(){
+          val alertDialog=AlertDialog.Builder(this)
+          alertDialog.setPositiveButton("yes",DialogInterface.OnClickListener { dialogInterface, i ->
+              Toast.makeText(this, "Sucessfully", Toast.LENGTH_SHORT).show()
+          })
+          alertDialog.setNegativeButton("No",DialogInterface.OnClickListener { dialogInterface, i ->
+              Toast.makeText(this, "Welcome to my page", Toast.LENGTH_SHORT).show()
+          })
+          val dialog=alertDialog.create()
+          dialog.setMessage("Are You Sure hat you want to go back")
+          dialog.setTitle("Gravity")
+          dialog.show()
+      }
 
     @SuppressLint("MissingInflatedId")
     private fun showCustomDialog(){
